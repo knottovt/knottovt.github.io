@@ -33,7 +33,18 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 </head>
 
+
 <body id="page-top" data-spy="scroll" data-target=".navbar">
+
+    <script type="text/javascript">
+        function sendMessage() {
+            // Android
+            JSBridge.showMessageInNative("success");
+            // iOS
+            window.webkit.messageHandlers.jsMessageHandler.postMessage("success");
+        }
+    </script>
+
     <div id="main-wrapper">
         <!-- Page Preloader -->
         <div id="preloader">
@@ -83,6 +94,8 @@
                         <!--.row-->
                         <strong>Social Media</strong>
                         <ul class="social-icon">
+                            <li><input onClick="sendMessage()" style="height:50px;width:300px;font-size:20pt;" type="button"
+                                value="Send data to native"/></li>
                             <li><a href="https://www.linkedin.com/in/visarut-tippun/" target="_blank"><i
                                         class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 
