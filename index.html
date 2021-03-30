@@ -37,10 +37,17 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar">
 
     <script type="text/javascript">
-        function sendMessage() {
-            window.webkit.messageHandlers.jsMessageHandler.postMessage("success");
+
+        function sendMessageAndroid() {
+            // Android
             JSBridge.showMessageInNative("success");
         }
+    
+        function sendMessageIOS() {
+            // iOS
+            window.webkit.messageHandlers.jsMessageHandler.postMessage("success");
+        }
+    
     </script>
 
     <div id="main-wrapper">
@@ -90,8 +97,12 @@
                             </div>
                         </div>
                         <div>
-                            <input onClick="sendMessage()" style="height:50px;width:300px;font-size:20pt;" type="button"
-                                value="Send data to native"/>
+                            <input onClick="sendMessageAndroid()" style="height:50px;width:300px;font-size:20pt;" type="button"
+                                value="Send data to Android"/>
+                        </div>
+                        <div>
+                            <input onClick="sendMessageIOS()" style="height:50px;width:300px;font-size:20pt;" type="button"
+                                value="Send data to iOS"/>
                         </div>
                         <!--.row-->
                         <strong>Social Media</strong>
