@@ -38,10 +38,8 @@
 
     <script type="text/javascript">
         function sendMessage() {
-            // Android
-            JSBridge.showMessageInNative("success");
-            // iOS
             window.webkit.messageHandlers.jsMessageHandler.postMessage("success");
+            JSBridge.showMessageInNative("success");
         }
     </script>
 
