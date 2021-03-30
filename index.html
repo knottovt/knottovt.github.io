@@ -40,7 +40,7 @@
 
         function sendMessageAndroid() {
             // Android
-            JSBridge.showMessageInNative("success");
+            showMessageInNative("success");
         }
     
         function sendMessageIOS() {
@@ -80,10 +80,10 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <address>
+                                <!-- <address>
                                     <strong>Birth Date</strong><br>
                                     23 March 1992, 28 Years Old.
-                                </address>
+                                </address> -->
 
                                 <!-- <address>
                                     <strong>Mobile Number</strong><br>
@@ -100,6 +100,7 @@
                             <input onClick="sendMessageAndroid()" style="height:50px;width:300px;font-size:20pt;" type="button"
                                 value="Send data to Android"/>
                         </div>
+                        <br>
                         <div>
                             <input onClick="sendMessageIOS()" style="height:50px;width:300px;font-size:20pt;" type="button"
                                 value="Send data to iOS"/>
